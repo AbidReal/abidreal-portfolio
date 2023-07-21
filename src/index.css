@@ -11,3 +11,9 @@
 .btn-color {
   @apply bg-gradient-to-r from-btnL to-btnR hover:to-btnL hover:to-btnL;
 }
+
+.triangle {
+  height: 0;
+  border-left: 40vh solid transparent;
+  border-bottom: 58rem solid #1d232a;
+}

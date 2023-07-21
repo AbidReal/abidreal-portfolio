@@ -2,7 +2,7 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   daisyui: {
-    themes: ["light", "dark"],
+    themes: ["dark"],
   },
   theme: {
     extend: {
@@ -12,6 +12,7 @@ export default {
       colors: {
         btnL: "#e55547",
         btnR: "#b02619",
+        primaryColor: "#13FF00",
       },
     },
   },

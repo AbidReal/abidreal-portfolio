@@ -22,7 +22,7 @@ const ToggleDark = () => {
   };
   return (
     <div
-      className={` rounded-full p-2 hover:cursor-pointer ${
+      className={` hidden  rounded-full p-2 hover:cursor-pointer ${
         isDarkMode ? "text-white bg-gray-700" : "bg-gray-200 text-black"
       }`}
       onClick={toggleDarkMode}

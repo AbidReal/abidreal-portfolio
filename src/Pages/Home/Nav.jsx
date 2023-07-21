@@ -1,14 +1,14 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import ToggleDark from "./ToggleDark";
-import { useState } from "react";
 
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="relative">
-      <div className="absolute top-0 left-0 w-full bg-gradient-to-r from-nav to-bar backdrop-filter backdrop-blur-lg">
+    <div className="fixed top-0 left-0 w-full z-50">
+      <div className="absolute top-0 left-0 w-full  backdrop-filter backdrop-blur-sm">
         <div className="custom-container">
           <div className="relative flex items-center justify-between">
             <div className="flex flex-col gap-4 items-center">
@@ -21,7 +21,7 @@ const Nav = () => {
                 <Link
                   to="/"
                   className={({ isActive }) =>
-                    isActive ? "text-red-400" : "default"
+                    isActive ? "text-green-400" : "default"
                   }
                 >
                   Home
@@ -29,8 +29,9 @@ const Nav = () => {
               </li>
               <li>
                 <Link
+                  to="/about"
                   className={({ isActive }) =>
-                    isActive ? "text-red-400" : "default"
+                    isActive ? "text-green-400" : "default"
                   }
                 >
                   About me
@@ -38,8 +39,9 @@ const Nav = () => {
               </li>
               <li>
                 <Link
+                  to="/projects"
                   className={({ isActive }) =>
-                    isActive ? "text-red-400" : "default"
+                    isActive ? "text-green-400" : "default"
                   }
                 >
                   Projects
@@ -47,8 +49,9 @@ const Nav = () => {
               </li>
               <li>
                 <Link
+                  to="/contact"
                   className={({ isActive }) =>
-                    isActive ? "text-red-400" : "default"
+                    isActive ? "text-green-400" : "default"
                   }
                 >
                   Contact
@@ -66,7 +69,7 @@ const Nav = () => {
                 {/* Mobile responsive nav bar */}
                 {isMenuOpen && (
                   <div className="absolute top-0 left-0 w-full z-10">
-                    <div className="p-5 bg-red-50 border rounded-lg shadow-sm">
+                    <div className="p-5 bg-green-500 border rounded-lg shadow-sm">
                       {/* Logo */}
                       <div className="flex items-center justify-between mg-4">
                         <Link
@@ -90,23 +93,32 @@ const Nav = () => {
                           <li>
                             <Link
                               to="/"
-                              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-red-400"
+                              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-400"
                             >
                               Home
                             </Link>
                           </li>
                           <li>
-                            <Link className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-red-400">
+                            <Link
+                              to="/about"
+                              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-400"
+                            >
                               About me
                             </Link>
                           </li>
                           <li>
-                            <Link className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-red-400">
+                            <Link
+                              to="/projects"
+                              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-400"
+                            >
                               Projects
                             </Link>
                           </li>
                           <li>
-                            <Link className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-red-400">
+                            <Link
+                              to="/contact"
+                              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-400"
+                            >
                               Contact
                             </Link>
                           </li>
