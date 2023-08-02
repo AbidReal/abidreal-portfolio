@@ -10,9 +10,9 @@ export default {
         square: "1",
       },
       colors: {
-        btnL: "#e55547",
-        btnR: "#b02619",
         primaryColor: "#13FF00",
+        hoverColor: "#10dc00",
+        activeColor: "#0eb800",
       },
     },
   },

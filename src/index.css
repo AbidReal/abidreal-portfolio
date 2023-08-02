@@ -8,12 +8,13 @@
 .nav-items-style {
   @apply font-medium tracking-wide  transition-colors duration-200 hover:text-red-700;
 }
-.btn-color {
-  @apply bg-gradient-to-r from-btnL to-btnR hover:to-btnL hover:to-btnL;
-}
 
 .triangle {
   height: 0;
-  border-left: 40vh solid transparent;
+  border-left: 20vw solid transparent;
   border-bottom: 58rem solid #1d232a;
+}
+
+.customButton {
+  @apply btn hover:bg-hoverColor active:bg-activeColor bg-primaryColor text-black text-center font-semibold py-2 w-28 mt-6 rounded-xl transition-colors duration-300;
 }

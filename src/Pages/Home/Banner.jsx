@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import { GrDocumentDownload } from "react-icons/gr";
 const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -44,6 +44,12 @@ const Banner = () => {
     }
   };
 
+  const handleDownload = () => {
+    const fileID = "1EiGWTqD7lAs3mlzOLwTNZcACID5Vyy3I";
+    const downloadLink = `https://drive.google.com/uc?export=download&id=${fileID}`;
+    window.open(downloadLink, "_blank");
+  };
+
   return (
     <div className="">
       <div className="relative">
@@ -58,6 +64,14 @@ const Banner = () => {
               </span>
             </div>
             <div className="pt-1 text-4xl font-bold text-white">{text}</div>
+            <div className="mt-10 w-96 ">
+              Front-end developer focused on creating Web applications. I really
+              like different projects that solve real problems.
+            </div>
+            <div className="customButton" onClick={handleDownload}>
+              <GrDocumentDownload className="font-semibold" />
+              Resume
+            </div>
           </div>
         </div>
 
