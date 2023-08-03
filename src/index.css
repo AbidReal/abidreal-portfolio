@@ -16,5 +16,36 @@
 }
 
 .customButton {
-  @apply btn hover:bg-hoverColor active:bg-activeColor bg-primaryColor text-black text-center font-semibold py-2 w-28 mt-6 rounded-xl transition-colors duration-300;
+  @apply btn btn-lg hover:bg-hoverColor active:bg-activeColor bg-primaryColor text-black items-center text-2xl text-center font-semibold px-10  mt-10 rounded-xl transition-colors duration-300;
+}
+
+.customBorder {
+  border: 6px solid #13ff00;
+  border-radius: 56% 44% 63% 37% / 46% 55% 45% 54%;
+  filter: drop-shadow(0 0 20px #13ff00);
+  transition: 0.5s;
+  animation: rotateAnimation 6s linear infinite;
+}
+.customBorder2 {
+  border: 6px solid #13ff00;
+  border-radius: 64% 36% 39% 61% / 42% 59% 41% 58%;
+  filter: drop-shadow(0 0 20px #13ff00);
+  transition: 0.5s;
+  animation: rotateAnimation2 6s linear infinite;
+}
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotateAnimation2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }

@@ -7,7 +7,7 @@ const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="fixed top-0 left-0 w-full z-50">
+    <div className="fixed top-0 left-0 w-full z-50 text-xl">
       <div className="absolute top-0 left-0 w-full  backdrop-filter backdrop-blur-sm">
         <div className="custom-container">
           <div className="relative flex items-center justify-between">
