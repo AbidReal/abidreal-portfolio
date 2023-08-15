@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { GrDocumentDownload } from "react-icons/gr";
+import { FaEnvelope, FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -90,6 +92,21 @@ const Banner = () => {
             <div className="customButton" onClick={handleDownload}>
               <GrDocumentDownload />
               Resume
+            </div>
+            {/*contact links */}
+            <div className="mt-10 text-4xl gap-10 flex">
+              <Link to="https://github.com/AbidReal">
+                <FaGithub className="hover:scale-110 transform transition-transform" />
+              </Link>
+              <Link to="https://www.linkedin.com/in/abid-hasan-4952a724a/">
+                <FaLinkedin className="hover:scale-110 transform transition-transform" />
+              </Link>
+              <Link to="mailto:abidhasan00123@gmail.com ">
+                <FaEnvelope className="hover:scale-110 transform transition-transform" />
+              </Link>
+              <Link to="https://www.facebook.com/profile.php?id=100038736845651">
+                <FaFacebook className="hover:scale-110 transform transition-transform" />
+              </Link>
             </div>
           </div>
         </div>
