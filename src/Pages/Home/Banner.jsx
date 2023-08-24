@@ -53,7 +53,7 @@ const Banner = () => {
   };
 
   return (
-    <div className="">
+    <div>
       <div className="relative">
         {/* Background color */}
         <div className="bg-[#2c2c30] h-[56.5rem] flex items-center justify-evenly -z-20 ">
