@@ -30,12 +30,12 @@ const Skills = () => {
             className="object-contain w-40 h-40 mx-auto"
           />
           <img
-            src="https://www.pngall.com/wp-content/uploads/13/Mongodb-PNG-Image-HD.png"
+            src="https://i.ibb.co/DMkCqW3/image.png"
             alt="mongodb"
             className="object-contain w-40 h-40 mx-auto"
           />
           <img
-            src="https://assets.stickpng.com/images/5847f40ecef1014c0b5e488a.png"
+            src="https://upload.wikimedia.org/wikipedia/commons/4/46/Touchicon-180.png?20200723100028"
             alt="firebase"
             className="object-contain w-40 h-40 mx-auto"
           />
