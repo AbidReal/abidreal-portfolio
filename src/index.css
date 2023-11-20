@@ -52,7 +52,7 @@
 
 /* custom card section(Projects) */
 .custom-card {
-  @apply relative w-80 h-[400px]  flex flex-col justify-between;
+  @apply relative w-96 h-[400px]  flex flex-col justify-between;
 }
 .custom-card .img-box {
   @apply relative w-full h-60 bg-[#1d232a] rounded-3xl;

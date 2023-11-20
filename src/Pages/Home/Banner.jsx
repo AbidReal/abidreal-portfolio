@@ -69,7 +69,7 @@ const Banner = () => {
           {/* image  */}
           <div className="absolute h-[56.5rem] object-contain left-24 top-20 ">
             <img
-              src="/public/portfolio image final.png"
+              src="https://i.ibb.co/KXhdsPB/portfolio-image-final.png"
               alt="Abid Hasan"
               className=" z-10 h-[56.5rem]"
             />
