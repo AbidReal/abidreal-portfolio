@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { FaTimes } from "react-icons/fa";
 
 const Projects = () => {
   const projectsData = [
@@ -12,14 +13,25 @@ const Projects = () => {
       gitLinkServer: "https://github.com/AbidReal/chef-recipe-hunter-server",
       liveSite: "https://chef-recipe-hunter-3306f.web.app/",
       images: [
-        "https://i.ibb.co/Fhq6hC6/image.png",
-        "https://i.ibb.co/Fhq6hC6/image.png",
-        "https://i.ibb.co/Fhq6hC6/image.png",
-        "https://i.ibb.co/Fhq6hC6/image.png",
+        "https://i.ibb.co/4pZRNDr/image-2023-11-24-173642334.png",
         "https://i.ibb.co/Fhq6hC6/image.png",
       ],
-      description: "This is the description of Website 1.",
-      technologies: ["HTML", "CSS", "JavaScript"],
+      description: [
+        "Yumami Eats: A website dedicated to Japanese cuisine.",
+        "Authentication System: Users can create an account using email, Google, or GitHub, implemented using Firebase.",
+        "Unique Design: The website showcases a distinctive design created by a front-end developer without the need for a reference Figma file. It reflects the developer's design sensibility.",
+        "Chefs Section: Features a section highlighting six chefs, each with their unique recipes.",
+        "Private Route: Clicking on a chef's recipe redirects users to a private route accessible only after logging in. The private route displays the chef's banner and a card layout featuring their dishes.",
+        "Additional Features: Includes a favorite button and animations throughout the website.",
+      ],
+      technologies: [
+        "HTML",
+        "CSS",
+        "Firebase",
+        "ExpressJS",
+        "Tailwind CSS",
+        "ReactJS",
+      ],
     },
     {
       id: 2,
@@ -33,8 +45,20 @@ const Projects = () => {
         "https://i.ibb.co/Ks68d1k/image-2023-11-24-162638869.png",
         "https://i.ibb.co/Fn4nBQ2/image-2023-11-24-162713830.png",
       ],
-      description: "This is the description of Website 2.",
-      technologies: ["React", "Tailwind CSS"],
+      description: [
+        "This is a toy marketplace which is focused on action figures.",
+        "It's a responsive single page react website where you can find action figures category wise.",
+        "It also has a all toy page where you can see all the toys in tabular form.",
+        "If you login then you can see toys details, add toys of your own , edit and delete your added toys. You cannot edit toys uploaded by others. Only admin can do that.",
+        "This website has many attractive sides like animation on scroll, beautiful ui, search feature etc.",
+      ],
+      technologies: [
+        "React",
+        "Tailwind CSS",
+        "Firebase",
+        "ExpressJs",
+        "MongoDB",
+      ],
     },
     {
       id: 3,
@@ -43,14 +67,11 @@ const Projects = () => {
       gitLinkServer: "",
       liveSite: "https://summer-camp-school-martial-art.web.app",
       images: [
-        "https://i.ibb.co/Fhq6hC6/image.png",
-        "https://i.ibb.co/Fhq6hC6/image.png",
-        "https://i.ibb.co/Fhq6hC6/image.png",
-        "https://i.ibb.co/Fhq6hC6/image.png",
-        "https://i.ibb.co/Fhq6hC6/image.png",
+        "https://i.ibb.co/cNNRQ57/Screenshot-2454.png",
+        "https://i.ibb.co/xFZ2BSv/image-2023-11-24-180631667.png",
       ],
-      description: "This is the description of Website 3.",
-      technologies: ["Vue.js", "Node.js"],
+      description: ["Description will be updated soon."],
+      technologies: ["Will Update soon."],
     },
   ];
 
@@ -127,8 +148,8 @@ const Projects = () => {
       {/* Modal for displaying project details */}
       {selectedProject && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50">
-          <div className="bg-base-100 p-5 md:p-10 rounded-lg max-w-md lg:max-w-lg xl:max-w-5xl w-full">
-            <h2 className="text-2xl font-semibold mb-4">
+          <div className="bg-base-100 p-5 md:p-10 rounded-lg max-w-md lg:max-w-lg xl:max-w-5xl w-full overflow-y-auto max-h-screen relative">
+            <h2 className="text-2xl font-semibold mb-4 ">
               {selectedProject.title}
             </h2>
             <Carousel showThumbs={false} showStatus={false}>
@@ -142,16 +163,23 @@ const Projects = () => {
                 </div>
               ))}
             </Carousel>
-            <p className="mb-4">{selectedProject.description}</p>
             <p className="mb-4">
-              <strong>Technologies used:</strong>{" "}
+              <span className="font-bold ">Description:</span> <br />
+              {selectedProject.description.map((description, index) => (
+                <p key={index} className="mt-1">
+                  -{description}
+                </p>
+              ))}
+            </p>
+            <p className="mb-4">
+              <span className="font-bold">Technologies used:</span>{" "}
               {selectedProject.technologies.join(", ")}
             </p>
             <button
-              className="btn bg-primaryColor text-white font-semibold"
+              className=" p-2 rounded-full items-center bg-primaryColor hover:bg-hoverColor text-black font-bold absolute top-4 right-4  "
               onClick={() => setSelectedProject(null)}
             >
-              Close
+              <FaTimes />
             </button>
           </div>
         </div>
