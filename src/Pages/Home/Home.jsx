@@ -5,6 +5,7 @@ import ContactMe from "./ContactMe";
 import Nav from "./Nav";
 import Projects from "./Projects";
 import Skills from "./Skills";
+import { motion } from "framer-motion";
 
 const Home = () => {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -12,11 +13,19 @@ const Home = () => {
   return (
     <div>
       <Nav selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-      <Banner />
-      <AboutMe />
+      <motion.div onViewportEnter={() => setSelectedPage("home")}>
+        <Banner />
+      </motion.div>
+      <motion.div onViewportEnter={() => setSelectedPage("about")}>
+        <AboutMe />
+      </motion.div>
       <Skills />
-      <Projects />
-      <ContactMe />
+      <motion.div onViewportEnter={() => setSelectedPage("projects")}>
+        <Projects />
+      </motion.div>
+      <motion.div onViewportEnter={() => setSelectedPage("contact")}>
+        <ContactMe />
+      </motion.div>
     </div>
   );
 };
