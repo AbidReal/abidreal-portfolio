@@ -28,11 +28,10 @@ const Projects = () => {
       gitLinkServer: "https://github.com/AbidReal/toy-marketplace-server",
       liveSite: "https://toy-marketplace-a7ee2.web.app/",
       images: [
-        "https://i.ibb.co/Fhq6hC6/image.png",
-        "https://i.ibb.co/Fhq6hC6/image.png",
-        "https://i.ibb.co/Fhq6hC6/image.png",
-        "https://i.ibb.co/Fhq6hC6/image.png",
-        "https://i.ibb.co/Fhq6hC6/image.png",
+        "https://i.ibb.co/Zddsq4C/image-2023-11-24-162833264.png",
+        "https://i.ibb.co/KjPPxwx/image-2023-11-24-162531491.png",
+        "https://i.ibb.co/Ks68d1k/image-2023-11-24-162638869.png",
+        "https://i.ibb.co/Fn4nBQ2/image-2023-11-24-162713830.png",
       ],
       description: "This is the description of Website 2.",
       technologies: ["React", "Tailwind CSS"],
@@ -64,11 +63,11 @@ const Projects = () => {
   return (
     <div id="projects" className="bg-secondaryBgColor">
       <div className="custom-container mt-20">
-        <div className="text-center text-7xl font-bold text-white relative mb-20 mt-20 uppercase ">
+        <div className="text-center text-7xl font-bold text-white relative mb-36 mt-20 uppercase ">
           <span className="border-b-8 border-primaryColor absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-4 w-20  "></span>
           Projects
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 place-items-center gap-10 mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 place-items-center gap-10 mb-36">
           {projectsData.map((project) => (
             <div key={project.id} className="custom-card">
               <div className="img-box">

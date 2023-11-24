@@ -8,13 +8,19 @@ const AboutMe = () => {
         </div>
         <div className="text-center text-3xl mb-20 mx-36 ">
           {/* Will Update Later */}
-          I&rsquo;m Abid Hasan, I&rsquo;m 20 years old and I live in São Vicente
-          -SP. Front-end developer and UI Designer, I&rsquo;m passionate about
-          interfaces, from their creation to development. I like to learn more
-          and more about the area, challenges that take me out of my comfort
-          zone are the best. <br /> <br /> I have prototyped and developed
-          Landing Pages, Sites, E-commerces, E-mails Marketing, Apps and
-          Programs.
+          I&rsquo;m <span className="text-primaryColor">Abid Hasan</span> ,
+          I&rsquo;m 21 years old and I currently I am studying in a University
+          in Bangladesh. I am a{" "}
+          <span className="text-primaryColor">Front-end developer</span> and{" "}
+          <span className="text-primaryColor">React Developer</span>. I have
+          also created <span className="text-primaryColor">MERN stack</span>{" "}
+          projects. I&rsquo;m passionate about interfaces, from their creation
+          to development. I like to learn more and more about this area,
+          <span className="text-primaryColor">challenges</span> that take me out
+          of my comfort zone are the best. <br /> <br /> I am actively engaged
+          in <span className="text-primaryColor">learning React Native</span>{" "}
+          Development and am excited to create practical and eye-catching mobile
+          apps in the future.
         </div>
       </div>
     </div>
