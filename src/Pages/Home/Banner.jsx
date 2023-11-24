@@ -3,6 +3,7 @@ import { GrDocumentDownload } from "react-icons/gr";
 import { FaEnvelope, FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
 const Banner = () => {
+  // For the circle and the text animation
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const toRotate = [
@@ -53,7 +54,7 @@ const Banner = () => {
   };
 
   return (
-    <div>
+    <div id="home">
       <div className="relative">
         {/* Background color */}
         <div className="bg-[#2c2c30] h-[56.5rem] flex items-center justify-evenly -z-20 ">
@@ -77,7 +78,7 @@ const Banner = () => {
 
           {/* Foreground right side texts */}
           <div></div>
-          <div className="z-50 ml-60 ">
+          <div className="z-40 ml-60 ">
             <div className="text-primaryColor text-5xl font-bold  ">
               ABID HA
               <span className="underline underline-offset-8">
@@ -113,8 +114,8 @@ const Banner = () => {
 
         {/* Foreground component */}
 
-        <div className="absolute top-0 right-0 flex items-center justify-end z-40 w-screen h-[56rem]">
-          <div className="absolute triangle w-8/12 flex justify-center items-center h-full z-40"></div>
+        <div className="absolute top-0 right-0 flex items-center justify-end z-30 w-screen h-[56rem]">
+          <div className="absolute triangle w-8/12 flex justify-center items-center h-full z-30"></div>
         </div>
       </div>
     </div>

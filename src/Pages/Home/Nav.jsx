@@ -1,9 +1,29 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import ToggleDark from "./ToggleDark";
+import { useState } from "react";
 
-const Nav = () => {
+// eslint-disable-next-line react/prop-types
+const Link = ({ page, selectedPage, setSelectedPage }) => {
+  // eslint-disable-next-line react/prop-types
+  const lowerCasePage = page.toLowerCase();
+  return (
+    <AnchorLink
+      className={`${
+        selectedPage === lowerCasePage ? "text-green-400" : ""
+      } hover:text-green-400 transition duration-500 `}
+      href={`#${lowerCasePage}`}
+      onClick={() => {
+        setSelectedPage(lowerCasePage);
+      }}
+    >
+      {page}
+    </AnchorLink>
+  );
+};
+
+// eslint-disable-next-line react/prop-types
+const Nav = ({ selectedPage, setSelectedPage }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -17,46 +37,26 @@ const Nav = () => {
 
             {/* Nav section */}
             <ul className="items-center hidden space-x-8 lg:flex">
-              <li>
-                <Link
-                  to="/"
-                  className={({ isActive }) =>
-                    isActive ? "text-green-400" : "default"
-                  }
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/about"
-                  className={({ isActive }) =>
-                    isActive ? "text-green-400" : "default"
-                  }
-                >
-                  About me
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/projects"
-                  className={({ isActive }) =>
-                    isActive ? "text-green-400" : "default"
-                  }
-                >
-                  Projects
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/contact"
-                  className={({ isActive }) =>
-                    isActive ? "text-green-400" : "default"
-                  }
-                >
-                  Contact
-                </Link>
-              </li>
+              <Link
+                page="Home"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+              <Link
+                page="About"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+              <Link
+                page="Projects"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+              <Link
+                page="Contact"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
             </ul>
 
             <div className="flex items-center space-x-4 md:space-x-10">
@@ -69,15 +69,8 @@ const Nav = () => {
                 {/* Mobile responsive nav bar */}
                 {isMenuOpen && (
                   <div className="absolute top-0 left-0 w-full z-10">
-                    <div className="p-5 bg-green-500 border rounded-lg shadow-sm">
-                      {/* Logo */}
-                      <div className="flex items-center justify-between mg-4">
-                        <Link
-                          to="/"
-                          className="flex flex-col gap-4 items-center"
-                        >
-                          {/* Logo content */}
-                        </Link>
+                    <div className="p-5 bg-zinc-900 border rounded-lg shadow-sm z-50 ">
+                      <div className="flex items-center justify-end mb-4 ">
                         <ToggleDark />
 
                         {/* Dropdown close button */}
@@ -89,38 +82,35 @@ const Nav = () => {
                       </div>
                       {/* Nav items section */}
                       <nav>
-                        <ul className="space-y-4 py-5">
+                        <ul className=" space-y-4 py-5">
                           <li>
                             <Link
-                              to="/"
-                              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-400"
-                            >
-                              Home
-                            </Link>
+                              page="Home"
+                              selectedPage={selectedPage}
+                              setSelectedPage={setSelectedPage}
+                            />
                           </li>
                           <li>
                             <Link
-                              to="/about"
-                              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-400"
-                            >
-                              About me
-                            </Link>
+                              page="About"
+                              selectedPage={selectedPage}
+                              setSelectedPage={setSelectedPage}
+                            />
                           </li>
                           <li>
                             <Link
-                              to="/projects"
-                              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-400"
-                            >
-                              Projects
-                            </Link>
+                              page="Projects"
+                              selectedPage={selectedPage}
+                              setSelectedPage={setSelectedPage}
+                            />
                           </li>
+
                           <li>
                             <Link
-                              to="/contact"
-                              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-green-400"
-                            >
-                              Contact
-                            </Link>
+                              page="Contact"
+                              selectedPage={selectedPage}
+                              setSelectedPage={setSelectedPage}
+                            />
                           </li>
                         </ul>
                       </nav>

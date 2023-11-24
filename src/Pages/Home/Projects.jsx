@@ -62,7 +62,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="bg-secondaryBgColor">
+    <div id="projects" className="bg-secondaryBgColor">
       <div className="custom-container mt-20">
         <div className="text-center text-7xl font-bold text-white relative mb-20 mt-20 uppercase ">
           <span className="border-b-8 border-primaryColor absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-4 w-20  "></span>
