@@ -28,7 +28,7 @@ const Nav = ({ selectedPage, setSelectedPage }) => {
 
   return (
     <div className="fixed top-0 left-0 w-full z-50 text-xl">
-      <div className="absolute top-0 left-0 w-full  backdrop-filter backdrop-blur-sm">
+      <div className="absolute top-0 left-0 w-full  backdrop-filter lg:backdrop-blur-sm">
         <div className="custom-container">
           <div className="relative flex items-center justify-between">
             <div className="flex flex-col gap-4 items-center">

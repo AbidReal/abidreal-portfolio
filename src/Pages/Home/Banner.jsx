@@ -55,47 +55,52 @@ const Banner = () => {
 
   return (
     <div id="home">
-      <div className="relative">
+      <div className="bg-[#2c2c30]">
         {/* Background color */}
-        <div className="bg-[#2c2c30] h-[56.5rem] flex items-center justify-evenly -z-20 ">
-          {/* neon borders  */}
-          {/* border 1  */}
-          <div className="absolute h-[42rem] w-[42rem] object-contain left-52 top-40 customBorder"></div>
-          {/* border 2  */}
+        <div className=" h-[56.5rem] lg:h-[37.3rem] xl:h-[56.5rem] flex items-center justify-evenly -z-20 ">
+          {/* neon ellipse  */}
+          {/* round ellipse 1  */}
+          <div className="absolute aspect-square w-1/2 lg:w-[28rem]  xl:w-[42rem] object-contain lg:left-20 xl:left-52 lg:top-24 xl:top-40 customBorder"></div>
+          {/* round ellipse 2  */}
           <div
-            className="absolute h-[42rem] w-[42rem] 
-          object-contain left-52 top-40 customBorder2"
+            className="absolute aspect-square w-1/2 lg:w-[28rem]  xl:w-[42rem] 
+          object-contain lg:left-20 xl:left-52 lg:top-24 xl:top-40 customBorder2"
           ></div>
 
           {/* image  */}
-          <div className="absolute h-[56.5rem] object-contain left-24 top-20 ">
+          <div className="absolute w-3/5 lg:h-[37.3rem]  xl:h-[56.4rem] object-contain lg:left-3 xl:left-24 lg:top-[3.4rem] xl:top-20 ">
             <img
               src="https://i.ibb.co/KXhdsPB/portfolio-image-final.png"
               alt="Abid Hasan"
-              className=" z-10 h-[56.5rem]"
+              className=" z-10 h-full"
             />
           </div>
 
           {/* Foreground right side texts */}
           <div></div>
-          <div className="z-40 ml-60 ">
-            <div className="text-primaryColor text-5xl font-bold  ">
+          <div className="z-40 ml-4 md:ml-60 ">
+            <div className="text-primaryColor text-4xl md:text-5xl font-bold">
               ABID HA
               <span className="underline underline-offset-8">
                 SAN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               </span>
             </div>
-            <div className="pt-1 text-5xl font-bold text-white">{text}_</div>
-            <div className="mt-10 w-[32rem] text-2xl ">
+            <div className="pt-1 text-4xl md:text-5xl font-bold text-white">
+              {text}_
+            </div>
+            <div className="mt-5 md:mt-10 max-w-[32rem] text-xl md:text-2xl">
               Front-end developer focused on creating Web applications. I really
               like different projects that solve real problems.
             </div>
-            <div className="customButton" onClick={handleDownload}>
+            <div
+              className="customButton mt-5 md:mt-10"
+              onClick={handleDownload}
+            >
               <GrDocumentDownload />
               Resume
             </div>
             {/*contact links */}
-            <div className="mt-10 text-4xl gap-10 flex">
+            <div className="mt-5 md:mt-10 text-3xl md:text-4xl gap-5 md:gap-10 flex">
               <Link to="https://github.com/AbidReal">
                 <FaGithub className="hover:scale-110 transform transition-transform" />
               </Link>
@@ -114,7 +119,7 @@ const Banner = () => {
 
         {/* Foreground component */}
 
-        <div className="absolute top-0 right-0 flex items-center justify-end z-30 w-screen h-[56rem]">
+        <div className="absolute top-0 right-0 lg:flex items-center justify-end z-30 w-screen lg:h-[17rem] xl:h-[55.2rem] hidden ">
           <div className="absolute triangle w-8/12 flex justify-center items-center h-full z-30"></div>
         </div>
       </div>
