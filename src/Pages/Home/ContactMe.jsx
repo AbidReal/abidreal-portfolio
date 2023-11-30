@@ -22,9 +22,9 @@ const ContactMe = () => {
         <span className="customTitleDesign  "></span>
         Contact Me
       </div>
-      <div className="bg-secondaryBgColor rounded-3xl  mb-36 text-center ">
+      <div className="bg-greyColor lg:bg-secondaryBgColor rounded-3xl  mb-36 text-center ">
         <div className=" flex flex-col lg:flex-row  ">
-          <div className="flex-auto  lg:w-2/5  w-full bg-greyColor rounded-s-3xl  ">
+          <div className="flex-auto  lg:w-2/5  w-full bg-greyColor rounded-t-3xl lg:rounded-s-3xl  ">
             <div className=" grid grid-cols-1 gap-4 content-evenly h-full my-10 lg:my-0 ">
               <div className="flex justify-end gap-2  ">
                 <div className=" hidden lg:block lg:text-3xl  font-semibold ">
@@ -59,10 +59,10 @@ const ContactMe = () => {
                   action="https://formsubmit.co/36b3a266b39aed34c10c4824d22cb3ca"
                   method="POST"
                 >
-                  <div className=" flex w-11/12 justify-between mx-auto mt-10 ">
-                    <div className="w-5/12 ">
+                  <div className=" lg:flex w-11/12 justify-between mx-auto mt-10 ">
+                    <div className="lg:w-5/12  mt-5 lg:mt-0">
                       <input
-                        className="input w-full bg-[#2c2c30]"
+                        className="input w-full bg-secondaryBgColor lg:bg-greyColor"
                         type="text"
                         placeholder="NAME"
                         {...register("name", {
@@ -82,9 +82,9 @@ const ContactMe = () => {
                       </p>
                     </div>
 
-                    <div className="w-6/12">
+                    <div className="lg:w-6/12 mt-5 lg:mt-0">
                       <input
-                        className="input w-full bg-[#2c2c30]"
+                        className="input w-full bg-secondaryBgColor lg:bg-greyColor"
                         type="email"
                         placeholder="EMAIL"
                         {...register("email", {
@@ -107,7 +107,7 @@ const ContactMe = () => {
                   </div>
 
                   <input
-                    className="input w-11/12 mt-10 bg-[#2c2c30] "
+                    className="input w-11/12 mt-5 lg:mt-10 bg-secondaryBgColor lg:bg-greyColor "
                     type="text"
                     placeholder="SUBJECT"
                     {...register("subject", {
@@ -123,7 +123,7 @@ const ContactMe = () => {
                   </p>
 
                   <textarea
-                    className="textarea textarea-bordered textarea-lg w-11/12  mt-10 bg-[#2c2c30]"
+                    className="textarea textarea-bordered textarea-lg w-11/12 mt-5 lg:mt-10 bg-secondaryBgColor lg:bg-greyColor"
                     type="text"
                     placeholder="MESSAGE"
                     {...register("message", {
@@ -144,7 +144,7 @@ const ContactMe = () => {
                   <div className="flex justify-end w-11/12 mx-auto ">
                     <button
                       type="submit"
-                      className="btn hover:bg-hoverColor active:bg-activeColor bg-primaryColor text-black items-center text-lg text-center font-semibold px-10  rounded-xl transition-colors duration-300 mb-10 mt-9 "
+                      className="btn w-full lg:w-auto hover:bg-hoverColor active:bg-activeColor bg-primaryColor text-black items-center text-lg text-center font-semibold px-10  rounded-xl transition-colors duration-300 mb-10 mt-9 "
                     >
                       <FaEnvelopeOpenText />
                       Send
