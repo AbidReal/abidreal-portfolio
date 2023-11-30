@@ -79,8 +79,8 @@ const Projects = () => {
         "https://github.com/AbidReal/summer-camp-school-server.git",
       liveSite: "https://summer-camp-school-martial-art.web.app",
       images: [
-        "https://i.ibb.co/cNNRQ57/Screenshot-2454.png",
-        "https://i.ibb.co/xFZ2BSv/image-2023-11-24-180631667.png",
+        "https://i.ibb.co/Ct393vP/Screenshot-2469.webp",
+        "https://i.ibb.co/sbCp3dw/Screenshot-2470.webp",
         "https://i.ibb.co/10FS2rS/Screenshot-2461.webp",
         "https://i.ibb.co/XfP63md/Screenshot-2464.webp",
       ],
