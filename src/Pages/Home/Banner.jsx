@@ -79,23 +79,20 @@ const Banner = () => {
           {/* Foreground right side texts */}
           <div></div>
           <div className="z-40 ml-4 lg:ml-60 ">
-            <div className="text-primaryColor text-4xl md:text-5xl font-bold">
+            <div className="text-primaryColor text-3xl lg:text-5xl font-bold">
               ABID HA
               <span className="underline underline-offset-8">
                 SAN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               </span>
             </div>
-            <div className="pt-1 text-4xl md:text-5xl font-bold text-white">
+            <div className="pt-1 text-3xl md:text-5xl font-bold text-white">
               {text}_
             </div>
-            <div className="mt-5 md:mt-10 max-w-[32rem] text-xl md:text-2xl">
+            <div className="mt-10 me-2 max-w-[32rem] text-lg md:text-2xl">
               Front-end developer focused on creating Web applications. I really
               like different projects that solve real problems.
             </div>
-            <div
-              className="customButton mt-5 md:mt-10"
-              onClick={handleDownload}
-            >
+            <div className="customButton mt-10  " onClick={handleDownload}>
               <GrDocumentDownload />
               Resume
             </div>

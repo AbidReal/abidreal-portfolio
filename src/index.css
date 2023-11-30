@@ -16,7 +16,7 @@
 }
 
 .customButton {
-  @apply btn btn-lg hover:bg-hoverColor active:bg-activeColor bg-primaryColor text-black items-center text-2xl text-center font-semibold px-10  mt-10 rounded-xl transition-colors duration-300;
+  @apply btn btn-md lg:btn-lg hover:bg-hoverColor active:bg-activeColor bg-primaryColor text-black items-center text-xl lg:text-2xl text-center font-semibold px-10  mt-10 mb-5 lg:mb-0 rounded-xl transition-colors duration-300;
 }
 
 .customBorder {
