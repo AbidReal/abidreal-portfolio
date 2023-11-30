@@ -23,7 +23,7 @@ const Projects = () => {
       gitLinkServer: "https://github.com/AbidReal/chef-recipe-hunter-server",
       liveSite: "https://chef-recipe-hunter-3306f.web.app/",
       images: [
-        "https://i.ibb.co/4pZRNDr/image-2023-11-24-173642334.png",
+        "https://i.ibb.co/k1vpfZf/Screenshot-2468.webp",
         "https://i.ibb.co/qD8sKvs/Screenshot-2467.webp",
       ],
       description: [
