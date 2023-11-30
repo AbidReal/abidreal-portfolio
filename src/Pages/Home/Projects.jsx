@@ -96,6 +96,7 @@ const Projects = () => {
                   className="w-full h-full rounded-3xl object-cover"
                   src={project.images[0]}
                   alt=""
+                  loading="lazy"
                 />
               </div>
               <div className="content p-5 text-white">
