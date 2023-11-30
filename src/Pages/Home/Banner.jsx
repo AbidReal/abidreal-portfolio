@@ -92,7 +92,7 @@ const Banner = () => {
               Front-end developer focused on creating Web applications. I really
               like different projects that solve real problems.
             </div>
-            <div className="customButton mt-10  " onClick={handleDownload}>
+            <div className="customButton " onClick={handleDownload}>
               <GrDocumentDownload />
               Resume
             </div>

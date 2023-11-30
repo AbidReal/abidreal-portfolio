@@ -12,6 +12,7 @@ export default {
       colors: {
         secondaryBgColor: "#171c21",
         primaryColor: "#13FF00",
+        greyColor: "#2c2c30",
         hoverColor: "#10dc00",
         activeColor: "#0eb800",
       },

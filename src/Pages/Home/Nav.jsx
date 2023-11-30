@@ -69,7 +69,7 @@ const Nav = ({ selectedPage, setSelectedPage }) => {
                 {/* Mobile responsive nav bar */}
                 {isMenuOpen && (
                   <div className="absolute top-0 left-0 w-full z-10">
-                    <div className="p-5 bg-zinc-900 border rounded-lg shadow-sm z-50 ">
+                    <div className="p-5  border rounded-lg shadow-sm z-50 backdrop-blur-lg bg-zinc-900/70 glass">
                       <div className="flex items-center justify-end mb-4 ">
                         <ToggleDark />
 

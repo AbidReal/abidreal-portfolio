@@ -16,7 +16,19 @@
 }
 
 .customButton {
-  @apply btn btn-md lg:btn-lg hover:bg-hoverColor active:bg-activeColor bg-primaryColor text-black items-center text-xl lg:text-2xl text-center font-semibold px-10  mt-10 mb-5 lg:mb-0 rounded-xl transition-colors duration-300;
+  @apply btn lg:h-16 hover:bg-hoverColor active:bg-activeColor bg-primaryColor text-black items-center text-xl lg:text-2xl text-center font-semibold px-10 mt-10 mb-5 lg:mb-0 rounded-xl transition-colors duration-300;
+}
+
+.customTitle {
+  @apply text-center text-3xl lg:text-7xl font-bold text-white relative  uppercase;
+}
+
+.customTitleDesign {
+  @apply border-b-4 lg:border-b-8 border-primaryColor absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-2 lg:translate-y-4 w-20;
+}
+
+.customSkillDesign {
+  @apply object-contain w-20 h-20 lg:w-40 lg:h-40 mx-auto hover:scale-110 hover:transition-transform duration-300;
 }
 
 .customBorder {
@@ -78,7 +90,7 @@
   @apply relative w-96 h-[400px]  flex flex-col justify-between;
 }
 .custom-card .img-box {
-  @apply relative w-full h-60 bg-[#1d232a] rounded-3xl;
+  @apply relative w-full h-60 bg-[#2c2c30] rounded-3xl;
 }
 .custom-card .img-box::before {
   @apply absolute w-6 h-6 right-1/2 bottom-0  bg-transparent;
@@ -93,10 +105,10 @@
   box-shadow: 8px 8px 0 #171c21;
 }
 .custom-card .content {
-  @apply relative w-full h-[150px] bg-[#1d232a] rounded-3xl rounded-tr-none;
+  @apply relative w-full h-[150px] bg-[#2c2c30] rounded-3xl rounded-tr-none;
 }
 .custom-card .content .details {
-  @apply absolute bg-[#1d232a] h-20 w-1/2 -top-20 right-0 border-t-8 border-t-secondaryBgColor border-l-8 border-l-secondaryBgColor rounded-tl-3xl;
+  @apply absolute bg-[#2c2c30] h-20 w-1/2 -top-20 right-0 border-t-8 border-t-secondaryBgColor border-l-8 border-l-secondaryBgColor rounded-tl-3xl;
 }
 .custom-card .content .details::before {
   @apply absolute w-6 h-6 right-0 bg-transparent;
@@ -108,5 +120,5 @@
   @apply absolute w-6 h-6 bottom-0 -left-6 bg-transparent;
   content: "";
   border-radius: 50%;
-  box-shadow: 8px 8px 0 #1d232a;
+  box-shadow: 8px 8px 0 #2c2c30;
 }

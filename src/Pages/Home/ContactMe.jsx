@@ -18,21 +18,23 @@ const ContactMe = () => {
 
   return (
     <div id="contact" className="custom-container text-white ">
-      <div className="text-center text-7xl font-bold text-white relative mb-32 mt-20 uppercase ">
-        <span className="border-b-8 border-primaryColor absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-4 w-20  "></span>
+      <div className="customTitle mb-10 lg:mb-32 mt-20">
+        <span className="customTitleDesign  "></span>
         Contact Me
       </div>
       <div className="bg-secondaryBgColor rounded-3xl  mb-36 text-center ">
         <div className=" flex flex-col lg:flex-row  ">
-          <div className="flex-auto  lg:w-2/5  w-full bg-[#2c2c30] rounded-s-3xl  ">
+          <div className="flex-auto  lg:w-2/5  w-full bg-greyColor rounded-s-3xl  ">
             <div className=" grid grid-cols-1 gap-4 content-evenly h-full my-10 lg:my-0 ">
               <div className="flex justify-end gap-2  ">
-                <div className=" text-3xl  font-semibold ">CONTACT</div>
+                <div className=" hidden lg:block lg:text-3xl  font-semibold ">
+                  CONTACT
+                </div>
                 <div className="h-1 w-64 my-auto  bg-white"></div>
               </div>
 
               {/* Contact Details Start */}
-              <div className="flex flex-col gap-4 text-lg sm:ps-36 lg:ps-24 my-10 lg:my-0 ">
+              <div className="flex flex-col gap-4 text-lg sm:ps-36 lg:ps-24 my-10 lg:my-0 justify-center mx-auto  lg:mx-0 ">
                 <div className="flex gap-1 items-center justify-start">
                   <FaPhoneAlt />: +8801789502830
                 </div>

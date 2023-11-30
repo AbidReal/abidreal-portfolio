@@ -84,9 +84,9 @@ const Projects = () => {
   return (
     <div id="projects" className="bg-secondaryBgColor">
       <div className="custom-container mt-20">
-        <div className="text-center text-7xl font-bold text-white relative mb-36 mt-20 uppercase ">
-          <span className="border-b-8 border-primaryColor absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-4 w-20  "></span>
-          Projects
+        <div className="customTitle mb-10 lg:mb-32 mt-20">
+          <span className="customTitleDesign  "></span>
+          Projects{" "}
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 place-items-center gap-10 mb-36">
           {projectsData.map((project) => (
@@ -101,7 +101,7 @@ const Projects = () => {
               <div className="content p-5 text-white">
                 <div className="details">
                   <button
-                    className="btn hover:bg-hoverColor active:bg-activeColor bg-primaryColor text-black items-center text-center font-semibold rounded-xl transition-colors duration-300 absolute inset-0 flex justify-center mx-5 my-3"
+                    className="btn hover:bg-primaryColor hover:text-black active:bg-primaryColor border-primaryColor bg-greyColor text-primaryColor items-center text-center font-semibold rounded-xl transition-colors duration-300 absolute inset-0 flex justify-center mx-5 my-3"
                     onClick={() => handleDetailsClick(project)}
                   >
                     Details
@@ -163,18 +163,18 @@ const Projects = () => {
                 </div>
               ))}
             </Carousel>
-            <p className="mb-4">
+            <div className="mb-4">
               <span className="font-bold ">Description:</span> <br />
               {selectedProject.description.map((description, index) => (
-                <p key={index} className="mt-1">
+                <div key={index} className="mt-1">
                   -{description}
-                </p>
+                </div>
               ))}
-            </p>
-            <p className="mb-4">
+            </div>
+            <div className="mb-4">
               <span className="font-bold">Technologies used:</span>{" "}
               {selectedProject.technologies.join(", ")}
-            </p>
+            </div>
             <button
               className=" p-2 rounded-full items-center bg-primaryColor hover:bg-hoverColor text-black font-bold absolute top-4 right-4  "
               onClick={() => setSelectedProject(null)}
