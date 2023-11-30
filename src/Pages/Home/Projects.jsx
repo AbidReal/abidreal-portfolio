@@ -22,7 +22,10 @@ const Projects = () => {
       gitLinkClient: "https://github.com/AbidReal/chef-recipe-hunter-client",
       gitLinkServer: "https://github.com/AbidReal/chef-recipe-hunter-server",
       liveSite: "https://chef-recipe-hunter-3306f.web.app/",
-      images: ["https://i.ibb.co/4pZRNDr/image-2023-11-24-173642334.png"],
+      images: [
+        "https://i.ibb.co/4pZRNDr/image-2023-11-24-173642334.png",
+        "https://i.ibb.co/Dw0Dj8g/Screenshot-2467.webp",
+      ],
       description: [
         "Yumami Eats: A website dedicated to Japanese cuisine.",
         "Authentication System: Users can create an account using email, Google, or GitHub, implemented using Firebase.",
@@ -70,15 +73,35 @@ const Projects = () => {
     {
       id: 3,
       title: "Course Enroll",
-      gitLinkClient: "",
-      gitLinkServer: "",
+      gitLinkClient:
+        "https://github.com/AbidReal/summer-camp-school-client.git",
+      gitLinkServer:
+        "https://github.com/AbidReal/summer-camp-school-server.git",
       liveSite: "https://summer-camp-school-martial-art.web.app",
       images: [
         "https://i.ibb.co/cNNRQ57/Screenshot-2454.png",
         "https://i.ibb.co/xFZ2BSv/image-2023-11-24-180631667.png",
+        "https://i.ibb.co/10FS2rS/Screenshot-2461.webp",
+        "https://i.ibb.co/XfP63md/Screenshot-2464.webp",
       ],
-      description: ["Description will be updated soon."],
-      technologies: ["Will Update soon."],
+      description: [
+        "Class Catalog: Browse through a wide range of fitness classes offered by the Fitness Center.",
+        "Enrollment: Enroll in your desired fitness classes by making a payment to reserve your spot.",
+        "Payment History: View your payment history to keep track of the classes you have enrolled in.",
+        "Class Details: Get detailed information about each fitness class, including class name, instructor, available seats, and price.",
+        "Responsive Design: The application is optimized for various devices, ensuring a seamless user experience on desktops, tablets, and mobile devices.",
+      ],
+      technologies: [
+        "React",
+        "Axios",
+        "TanstackQuery",
+        "React Router",
+        "Tailwind CSS",
+        "DaisyUi",
+        "React-awesome-reveal",
+        "React-hook-form",
+        "react icons",
+      ],
     },
   ];
 
@@ -126,6 +149,8 @@ const Projects = () => {
                     {project.gitLinkClient && (
                       <Link
                         to={project.gitLinkClient}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className=" hover:text-hoverColor"
                       >
                         Client Code →
@@ -134,6 +159,8 @@ const Projects = () => {
                     {project.gitLinkServer && (
                       <Link
                         to={project.gitLinkServer}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className=" hover:text-hoverColor"
                       >
                         Server Code →
@@ -177,14 +204,18 @@ const Projects = () => {
             <div className="mb-4">
               <span className="font-bold ">Description:</span> <br />
               {selectedProject.description.map((description, index) => (
-                <div key={index} className="mt-1">
+                <div key={index} className="mt-3">
                   -{description}
                 </div>
               ))}
             </div>
             <div className="mb-4">
               <span className="font-bold">Technologies used:</span>{" "}
-              {selectedProject.technologies.join(", ")}
+              {selectedProject.technologies.map((technologies, index) => (
+                <div key={index} className="mt-1">
+                  -{technologies}
+                </div>
+              ))}
             </div>
             <button
               className=" p-2 rounded-full items-center bg-primaryColor hover:bg-hoverColor text-black font-bold absolute top-4 right-4  "
