@@ -57,18 +57,18 @@ const Banner = () => {
     <div id="home">
       <div className="bg-[#2c2c30]">
         {/* Background color */}
-        <div className=" h-[56.5rem] lg:h-[37.3rem] xl:h-[56.5rem] flex items-center justify-evenly -z-20 ">
+        <div className="  lg:h-[37.3rem] xl:h-[56.5rem] flex flex-col-reverse lg:flex-row items-center justify-center lg:justify-between xl:justify-evenly -z-20 pb-96 md:pb-[40rem] lg:pb-0 pt-5 md:pt-20 lg:pt-0 ">
           {/* neon ellipse  */}
           {/* round ellipse 1  */}
-          <div className="absolute aspect-square w-1/2 lg:w-[28rem]  xl:w-[42rem] object-contain lg:left-20 xl:left-52 lg:top-24 xl:top-40 customBorder"></div>
+          <div className="absolute aspect-square w-6/12 lg:w-[28rem]  xl:w-[42rem] object-contain lg:left-24 xl:left-52 lg:top-24 xl:top-40 customBorder mt-[48rem] md:mt-[70rem] lg:mt-0  "></div>
           {/* round ellipse 2  */}
           <div
-            className="absolute aspect-square w-1/2 lg:w-[28rem]  xl:w-[42rem] 
-          object-contain lg:left-20 xl:left-52 lg:top-24 xl:top-40 customBorder2"
+            className="absolute aspect-square w-6/12 lg:w-[28rem]  xl:w-[42rem] 
+          object-contain lg:left-24 xl:left-52 lg:top-24 xl:top-40 customBorder2 mt-[48rem] md:mt-[70rem] lg:mt-0  "
           ></div>
 
           {/* image  */}
-          <div className="absolute w-3/5 lg:h-[37.3rem]  xl:h-[56.4rem] object-contain lg:left-3 xl:left-24 lg:top-[3.4rem] xl:top-20 ">
+          <div className="absolute w-8/12 lg:h-[37.3rem]  xl:h-[56.4rem] object-contain lg:left-4 xl:left-24 lg:top-[3.4rem] xl:top-20 mt-[50rem] md:mt-[70rem] lg:mt-0  ">
             <img
               src="https://i.ibb.co/KXhdsPB/portfolio-image-final.png"
               alt="Abid Hasan"
@@ -78,7 +78,7 @@ const Banner = () => {
 
           {/* Foreground right side texts */}
           <div></div>
-          <div className="z-40 ml-4 md:ml-60 ">
+          <div className="z-40 ml-4 lg:ml-60 ">
             <div className="text-primaryColor text-4xl md:text-5xl font-bold">
               ABID HA
               <span className="underline underline-offset-8">

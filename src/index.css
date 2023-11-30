@@ -20,18 +20,41 @@
 }
 
 .customBorder {
-  border: 6px solid #13ff00;
+  border: 3px solid #13ff00;
   border-radius: 56% 44% 63% 37% / 46% 55% 45% 54%;
   filter: drop-shadow(0 0 20px #13ff00);
   transition: 0.5s;
   animation: rotateAnimation 6s linear infinite;
 }
+@media (min-width: 1024px) {
+  .customBorder {
+    border-width: 4px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .customBorder {
+    border-width: 6px;
+  }
+}
+
 .customBorder2 {
-  border: 6px solid #13ff00;
+  border: 3px solid #13ff00;
   border-radius: 64% 36% 39% 61% / 42% 59% 41% 58%;
   filter: drop-shadow(0 0 20px #13ff00);
   transition: 0.5s;
   animation: rotateAnimation2 6s linear infinite;
+}
+@media (min-width: 1024px) {
+  .customBorder2 {
+    border-width: 4px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .customBorder2 {
+    border-width: 6px;
+  }
 }
 @keyframes rotateAnimation {
   0% {
