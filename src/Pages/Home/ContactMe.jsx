@@ -1,8 +1,18 @@
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { FaEnvelope, FaEnvelopeOpenText, FaPhoneAlt } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const ContactMe = () => {
+  useEffect(() => {
+    Aos.init({
+      offset: 100,
+      duration: 500,
+      easing: "ease-in-out",
+    });
+  }, []);
   const {
     register,
     trigger,
@@ -17,12 +27,19 @@ const ContactMe = () => {
   };
 
   return (
-    <div id="contact" className="custom-container text-white ">
+    <div
+      id="contact"
+      data-aos="fade-up"
+      className="custom-container text-white "
+    >
       <div className="customTitle mb-10 lg:mb-32 mt-20">
         <span className="customTitleDesign  "></span>
         Contact Me
       </div>
-      <div className="bg-greyColor lg:bg-secondaryBgColor rounded-3xl  mb-36 text-center ">
+      <div
+        data-aos="fade-up"
+        className="bg-greyColor lg:bg-secondaryBgColor rounded-3xl  mb-36 text-center "
+      >
         <div className=" flex flex-col lg:flex-row  ">
           <div className="flex-auto  lg:w-2/5  w-full bg-greyColor rounded-t-3xl lg:rounded-none lg:rounded-s-3xl  ">
             <div className=" grid grid-cols-1 gap-4 content-evenly h-full my-10 lg:my-0 ">

@@ -2,7 +2,17 @@ import { useEffect, useState } from "react";
 import { GrDocumentDownload } from "react-icons/gr";
 import { FaEnvelope, FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Aos from "aos";
+import "aos/dist/aos.css";
 const Banner = () => {
+  useEffect(() => {
+    Aos.init({
+      offset: 100,
+      duration: 500,
+      easing: "ease-in-out",
+      once: true,
+    });
+  }, []);
   // For the circle and the text animation
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -78,7 +88,7 @@ const Banner = () => {
 
           {/* Foreground right side texts */}
           <div></div>
-          <div className="z-40 ml-4 lg:ml-60 ">
+          <div data-aos="fade-left" className="z-40 ml-4 lg:ml-60 ">
             <div className="text-primaryColor text-3xl lg:text-5xl font-bold">
               ABID HA
               <span className="underline underline-offset-8">

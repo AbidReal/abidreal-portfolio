@@ -1,6 +1,7 @@
 import "aos/dist/aos.css";
 import Aos from "aos";
 import { useEffect } from "react";
+
 const Skills = () => {
   useEffect(() => {
     Aos.init({
@@ -11,7 +12,7 @@ const Skills = () => {
   }, []);
   return (
     <div className="custom-container">
-      <div className="text-center text-white ">
+      <div data-aos="fade-up" className="text-center text-white ">
         <div className="customTitle mb-10 lg:mb-32 mt-20">
           <span className="customTitleDesign  "></span>
           Skills

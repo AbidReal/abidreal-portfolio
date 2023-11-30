@@ -1,12 +1,25 @@
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const AboutMe = () => {
+  useEffect(() => {
+    Aos.init({
+      offset: 100,
+      duration: 500,
+      easing: "ease-in-out",
+    });
+  }, []);
   return (
     <div className="bg-secondaryBgColor ">
-      <div className="custom-container ">
+      <div data-aos="fade-up" className="custom-container ">
         <div id="about" className="customTitle mb-10 pt-20">
           <span className="customTitleDesign "></span>
           About Me
         </div>
-        <div className="text-center text-xl lg:text-3xl mb-20 mx-10 xs:mx-0  lg:mx-36 ">
+        <div
+          data-aos="fade-up"
+          className="text-center text-xl lg:text-3xl mb-20 mx-10 xs:mx-0  lg:mx-36 "
+        >
           {/* Will Update Later */}
           I&rsquo;m <span className="text-primaryColor">Abid Hasan</span> ,
           I&rsquo;m 21 years old and I currently I am studying in a University

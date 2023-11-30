@@ -1,10 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { FaTimes } from "react-icons/fa";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Projects = () => {
+  useEffect(() => {
+    Aos.init({
+      offset: 100,
+      duration: 500,
+      easing: "ease-in-out",
+    });
+  }, []);
   const projectsData = [
     {
       id: 1,
@@ -80,14 +89,17 @@ const Projects = () => {
 
   return (
     <div id="projects" className="bg-secondaryBgColor">
-      <div className="custom-container mt-20">
+      <div data-aos="fade-up" className="custom-container mt-20">
         <div className="customTitle mb-10 lg:mb-32 mt-20">
           <span className="customTitleDesign  "></span>
           Projects{" "}
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 place-items-center gap-10 mb-36">
+        <div
+          data-aos="fade-up"
+          className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 place-items-center gap-10 mb-36"
+        >
           {projectsData.map((project) => (
-            <div key={project.id} className="custom-card">
+            <div key={project.id} className="custom-card ">
               <div className="img-box">
                 <img
                   className="w-full h-full rounded-3xl object-cover"
