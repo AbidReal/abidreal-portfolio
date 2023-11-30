@@ -12,10 +12,7 @@ const Projects = () => {
       gitLinkClient: "https://github.com/AbidReal/chef-recipe-hunter-client",
       gitLinkServer: "https://github.com/AbidReal/chef-recipe-hunter-server",
       liveSite: "https://chef-recipe-hunter-3306f.web.app/",
-      images: [
-        "https://i.ibb.co/4pZRNDr/image-2023-11-24-173642334.png",
-        "https://i.ibb.co/Fhq6hC6/image.png",
-      ],
+      images: ["https://i.ibb.co/4pZRNDr/image-2023-11-24-173642334.png"],
       description: [
         "Yumami Eats: A website dedicated to Japanese cuisine.",
         "Authentication System: Users can create an account using email, Google, or GitHub, implemented using Firebase.",
