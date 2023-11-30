@@ -70,7 +70,7 @@ const Banner = () => {
           {/* image  */}
           <div className="absolute w-8/12 lg:h-[37.3rem]  xl:h-[56.4rem] object-contain lg:left-4 xl:left-24 lg:top-[3.4rem] xl:top-20 mt-[50rem] md:mt-[70rem] lg:mt-0  ">
             <img
-              src="https://i.ibb.co/KXhdsPB/portfolio-image-final.png"
+              src="https://i.ibb.co/yyMRdpb/image-2023-11-30-191732748.webp"
               alt="Abid Hasan"
               className=" z-10 h-full"
             />
