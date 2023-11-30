@@ -11,16 +11,21 @@ const Skills = () => {
       once: false,
     });
   }, []);
+  const isMobile = window.innerWidth < 768;
+
   return (
     <div className="custom-container">
-      <div data-aos="fade-up" className="text-center text-white ">
+      <div
+        data-aos={isMobile ? "none" : "fade-up"}
+        className="text-center text-white "
+      >
         <div className="customTitle mb-10 lg:mb-32 mt-20">
           <span className="customTitleDesign  "></span>
           Skills
         </div>
         <div className="grid grid-cols-3 gap-10 mb-10 ">
           <div
-            data-aos="fade-right"
+            data-aos={isMobile ? "none" : "fade-right"}
             data-aos-anchor="#anchor-html"
             id="anchor-html"
           >
@@ -33,7 +38,7 @@ const Skills = () => {
           </div>
 
           <div
-            data-aos="fade-up"
+            data-aos={isMobile ? "none" : "fade-up"}
             data-aos-anchor="#anchor-css3"
             id="anchor-css3"
           >
@@ -45,7 +50,7 @@ const Skills = () => {
             />
           </div>
           <div
-            data-aos="fade-left"
+            data-aos={isMobile ? "none" : "fade-left"}
             data-aos-anchor="#anchor-reactjs"
             id="anchor-reactjs"
           >
@@ -57,7 +62,7 @@ const Skills = () => {
             />
           </div>
           <div
-            data-aos="fade-right"
+            data-aos={isMobile ? "none" : "fade-right"}
             data-aos-anchor="#anchor-tailwind"
             id="anchor-tailwind"
           >
@@ -69,7 +74,7 @@ const Skills = () => {
             />
           </div>
           <div
-            data-aos="fade-up"
+            data-aos={isMobile ? "none" : "fade-up"}
             data-aos-anchor="#anchor-bootstrap"
             id="anchor-bootstrap"
           >
@@ -81,7 +86,7 @@ const Skills = () => {
             />
           </div>
           <div
-            data-aos="fade-left"
+            data-aos={isMobile ? "none" : "fade-left"}
             data-aos-anchor="#anchor-mongodb"
             id="anchor-mongodb"
           >
@@ -93,7 +98,7 @@ const Skills = () => {
             />
           </div>
           <div
-            data-aos="fade-right"
+            data-aos={isMobile ? "none" : "fade-right"}
             data-aos-anchor="#anchor-firebase"
             id="anchor-firebase"
           >
@@ -105,7 +110,7 @@ const Skills = () => {
             />
           </div>
           <div
-            data-aos="fade-up"
+            data-aos={isMobile ? "none" : "fade-up"}
             data-aos-anchor="#anchor-javascript"
             id="anchor-javascript"
           >
@@ -117,7 +122,7 @@ const Skills = () => {
             />
           </div>
           <div
-            data-aos="fade-left"
+            data-aos={isMobile ? "none" : "fade-left"}
             data-aos-anchor="#anchor-nodejs"
             id="anchor-nodejs"
           >
