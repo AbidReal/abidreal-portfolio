@@ -7,6 +7,7 @@ const AboutMe = () => {
       offset: 100,
       duration: 500,
       easing: "ease-in-out",
+      once: false,
     });
   }, []);
   return (
