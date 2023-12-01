@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -7,6 +7,13 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 const Projects = () => {
+  const modalRef = useRef(null);
+
+  const handleOutsideClick = (event) => {
+    if (modalRef.current && !modalRef.current.contains(event.target)) {
+      setSelectedProject(null); // Close the modal
+    }
+  };
   useEffect(() => {
     Aos.init({
       offset: 100,
@@ -14,6 +21,12 @@ const Projects = () => {
       easing: "ease-in-out",
       once: false,
     });
+    document.addEventListener("mousedown", handleOutsideClick);
+
+    return () => {
+      // Remove the event listener on component unmount
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
   }, []);
   const projectsData = [
     {
@@ -186,7 +199,10 @@ const Projects = () => {
       {/* Modal for displaying project details */}
       {selectedProject && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50">
-          <div className="bg-base-100 p-5 md:p-10 rounded-lg max-w-md lg:max-w-lg xl:max-w-5xl w-full overflow-y-auto max-h-screen relative">
+          <div
+            ref={modalRef}
+            className="bg-base-100 p-5 md:p-10 rounded-lg max-w-md lg:max-w-lg xl:max-w-5xl w-full overflow-y-auto max-h-screen relative"
+          >
             <h2 className="text-2xl font-semibold mb-4 ">
               {selectedProject.title}
             </h2>
