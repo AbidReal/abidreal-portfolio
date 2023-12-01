@@ -190,7 +190,13 @@ const Projects = () => {
             <h2 className="text-2xl font-semibold mb-4 ">
               {selectedProject.title}
             </h2>
-            <Carousel showThumbs={false} showStatus={false}>
+            <Carousel
+              autoPlay={true}
+              interval={4000}
+              infiniteLoop={true}
+              showThumbs={false}
+              showStatus={false}
+            >
               {selectedProject.images.map((image, index) => (
                 <div key={index}>
                   <img
