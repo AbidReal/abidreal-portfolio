@@ -58,7 +58,7 @@ const Banner = () => {
   };
 
   const handleDownload = () => {
-    const fileID = "1EiGWTqD7lAs3mlzOLwTNZcACID5Vyy3I";
+    const fileID = "1e5zo6fnK3AJQuOEc90DjBJcrMxAd0Shy";
     const downloadLink = `https://drive.google.com/uc?export=download&id=${fileID}`;
     window.open(downloadLink, "_blank");
   };
